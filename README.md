@@ -1,46 +1,46 @@
 # Angular Universal Starter
 
-![Angular Universal](https://angular.io/assets/images/logos/concept-icons/universal.png)
-
-A minimal Angular starter for Universal JavaScript using the [Angular CLI](https://github.com/angular/angular-cli)
-If you're looking for the Angular Universal repo go to [**angular/universal**](https://github.com/angular/universal)  
 
 ## Getting Started
 
-This demo is built following the [Angular-CLI Wiki guide](https://github.com/angular/angular-cli/wiki/stories-universal-rendering)
-
-We're utilizing packages from the [Angular Universal @nguniversal](https://github.com/angular/universal) repo, such as [ng-module-map-ngfactory-loader](https://github.com/angular/universal/modules/module-map-ngfactory-loader) to enable Lazy Loading.
-
----
-
-### Build Time Prerendering Vs. Server Side Rendering(ssr)
-This repo demonstrates the use of 2 different forms of Server Side Rendering.
-
-**Prerender** 
-* Happens at build time
-* Renders your application and replaces the dist index.html with a version rendered at the route `/`.
-
-**Server-Side Rendering(ssr)**
-* Happens at runtime
-* Uses `ngExpressEngine` to render your application on the fly at the requested url.
+- [Angular-CLI Wiki guide](https://github.com/angular/angular-cli/wiki/stories-universal-rendering)
+- [Angular Universal @nguniversal](https://github.com/angular/universal)
+- [ng-module-map-ngfactory-loader](https://github.com/angular/universal/modules/module-map-ngfactory-loader) to enable Lazy Loading.
 
 ---
 
 ### Installation
-* `npm install` or `yarn`
+`yarn`
 
 ### Development (Client-side only rendering)
-* run `npm run start` which will start `ng serve`
+* run `yarn start` which will start `ng serve`
 
 ### Production (also for testing SSR/Pre-rendering locally)
-**`npm run build:ssr && npm run serve:ssr`** - Compiles your application and spins up a Node Express to serve your Universal application on `http://localhost:4000`.
+**`yarn build:ssr && yarn serve:ssr`** - Compiles your application and spins up a Node Express to serve your Universal application on `http://localhost:4000`.
 
-**`npm run build:prerender && npm run serve:prerender`** - Compiles your application and prerenders your applications files, spinning up a demo http-server so you can view it on `http://localhost:8080`
-**Note**: To deploy your static site to a static hosting platform you will have to deploy the `dist/browser` folder, rather than the usual `dist`
-
+**`yarn build:prerender && yarn serve:prerender`** - Compiles your application and prerenders your applications files, spinning up a demo http-server so you can view it on `http://localhost:8080`
 
 ## Universal "Gotchas"
-Moved to [/angular/universal/blob/master/docs/gotchas.md](https://github.com/angular/universal/blob/master/docs/gotchas.md)
+[/angular/universal/blob/master/docs/gotchas.md](https://github.com/angular/universal/blob/master/docs/gotchas.md)
 
-# License
-[![MIT License](https://img.shields.io/badge/license-MIT-blue.svg?style=flat)](/LICENSE)
+## Docker
+
+## Running the Project Using Docker Containers
+
+1. Install the Angular CLI
+
+    `npm install -g @angular/cli`
+
+2. Run `yarn`
+
+3. Build the project
+
+    `ng build`
+
+4. Run `docker-compose build`
+
+5. Run `docker-compose up`
+
+6. Visit `http://localhost:4000`
+
+If you'd like to run the `production` version run `docker-compose -f docker-compose.prod.yml [build | up]`. This uses a multi-stage Docker build process to create the nginx image for the Angular app.

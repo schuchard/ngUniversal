@@ -12,7 +12,7 @@ RUN yarn
 
 COPY . .
 
-RUN yarn build:client-and-server-bundles
+RUN yarn build:ssr
 
 EXPOSE 4000
 

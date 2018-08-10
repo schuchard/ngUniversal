@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { PostResolver } from './post-resolver.service';
+import { PostResolver } from './service/post-resolver.service';
 import { PostContainerComponent } from './container/post-container.component';
 
 const routes: Routes = [

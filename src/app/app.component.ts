@@ -4,9 +4,12 @@ import {Component} from '@angular/core';
   selector: 'app-root',
   template: `
   <h1>Universal Demo using Angular and Angular CLI</h1>
-  <a routerLink="/">Home</a>
-  <a routerLink="/lazy">Lazy</a>
-  <a routerLink="/lazy/nested">Lazy_Nested</a>
+  <ul>
+  <li><a routerLink="/">Home</a></li>
+  <li><a routerLink="/lazy">Lazy</a></li>
+  <li><a routerLink="/lazy/nested">Lazy_Nested</a></li>
+  <li><a routerLink="/post/1">Post 1</a></li>
+  </ul>
   <router-outlet></router-outlet>
   `,
   styles: []

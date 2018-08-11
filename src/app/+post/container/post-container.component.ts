@@ -5,7 +5,7 @@ import { takeUntil } from 'rxjs/operators';
 
 @Component({
   template: `
-   <h3>post-container Works!</h3>
+   <h3>post-container {{body.id}}</h3>
    <code>
   		{{body | json}}
    </code>

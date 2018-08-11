@@ -1,9 +1,12 @@
 import { NgModule, Optional, SkipSelf } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
+import { HeaderComponent } from './header/header.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
-  imports: [HttpClientModule],
-  declarations: [],
+  imports: [HttpClientModule, RouterModule],
+  declarations: [HeaderComponent],
+  exports: [HeaderComponent]
 })
 export class CoreModule {
   constructor(

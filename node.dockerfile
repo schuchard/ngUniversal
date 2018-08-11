@@ -10,7 +10,7 @@ COPY yarn.lock yarn.lock
 
 RUN yarn
 
-COPY . .
+COPY . /app
 
 RUN yarn build:ssr
 

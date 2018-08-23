@@ -2,11 +2,12 @@ import { NgModule, Optional, SkipSelf } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { HeaderComponent } from './header/header.component';
 import { RouterModule } from '@angular/router';
+import { SharedModule } from '@shared/shared.module';
 
 @NgModule({
-  imports: [HttpClientModule, RouterModule],
+  imports: [HttpClientModule, RouterModule, SharedModule],
   declarations: [HeaderComponent],
-  exports: [HeaderComponent]
+  exports: [HeaderComponent],
 })
 export class CoreModule {
   constructor(

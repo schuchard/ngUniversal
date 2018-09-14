@@ -33,7 +33,7 @@ ROUTES.forEach((route) => {
     mkdirSync(fullPath);
   }
 
-  console.log(`${route}`);
+  console.log(route);
 
   // Writes rendered HTML to index.html, replacing the file if it already exists.
   previousRender = previousRender

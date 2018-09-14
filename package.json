@@ -10,6 +10,7 @@
     "lint": "ng lint ng-universal-demo",
     "build:client-and-server-bundles": "del dist && ng build --prod && ng run ng-universal-demo:server:production",
     "build:prerender": "yarn build:client-and-server-bundles && yarn webpack:server && yarn generate:prerender",
+    "build:prerender:server": "yarn webpack:server && yarn generate:prerender && yarn generate:prerender",
     "build:ssr": "yarn build:client-and-server-bundles && yarn webpack:server",
     "generate:prerender": "cd dist && node prerender",
     "test": "jest",

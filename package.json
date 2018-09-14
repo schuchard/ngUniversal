@@ -16,7 +16,7 @@
     "test": "jest",
     "test:watch": "jest --watch",
     "webpack:server": "webpack --config webpack.server.config.js --progress --colors",
-    "serve:prerender": "cd dist/browser && http-server",
+    "serve:prerender": "http-server ./dist/browser -p 4200 -c-1",
     "serve:ssr": "node dist/server",
     "docker:serve": "docker-compose build && docker-compose up"
   },
